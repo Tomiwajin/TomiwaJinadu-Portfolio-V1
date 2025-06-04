@@ -6,7 +6,7 @@ export const StarBackground = () => {
 
   useEffect(() => {
     generateStars();
-    generateMeteors(); // ✅ call the function correctly
+    generateMeteors();
 
     window.addEventListener("resize", () => {
       generateStars();
