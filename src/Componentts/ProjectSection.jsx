@@ -3,9 +3,29 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
+    title: "TomiwaJinadu Portfolio-V1",
+    description:
+      "My personal portfolio built with React, Vite, and Tailwind CSS to showcase my development work, skills, and resume. It features smooth animations, responsive design, and modern UI practices.",
+    image: "/projects/project5.png",
+    tags: ["React", "Vite", "Tailwind CSS"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/Tomiwajin/TomiwaJinadu-Portfolio-V1.git",
+  },
+  {
+    id: 2,
+    title: "Task Manager Desktop App",
+    description:
+      "A JavaFX-based task management desktop application that lets users create, update, and delete tasks. Built with Maven and JavaFX, and integrated with a custom Node.js-powered download website.",
+    image: "/projects/project3.png",
+    tags: ["Java", "JavaFX", "Maven", "Node.js"],
+    demoUrl: "https://task-manager-nr9n.onrender.com",
+    githubUrl: "https://github.com/Tomiwajin/Task-Manager.git",
+  },
+  {
+    id: 3,
     title: "Multithreaded File Transfer System",
     description:
-      "A TCP-based Rust application with multithreaded server support to transfer sales data between branches securely.",
+      "A Rust-based client-server file transfer system using multithreading and TCP sockets to handle parallel sales data transfers across branches.",
     image: "/projects/project1.png",
     tags: ["Rust", "TCP", "Multithreading", "Socket Programming"],
     demoUrl: "https://github.com/ja00069-Git/sysprog_proj2_abwe_917594092.git",
@@ -13,10 +33,10 @@ const projects = [
       "https://github.com/ja00069-Git/sysprog_proj2_abwe_917594092.git",
   },
   {
-    id: 2,
+    id: 4,
     title: "House Price Prediction ML App",
     description:
-      "Built a machine learning model to predict housing prices using Scikit-learn, regression models, and data visualization.",
+      "Built a regression model using Scikit-learn to predict California housing prices with data visualization and deployed using Render.",
     image: "/projects/project2.png",
     tags: [
       "Python",
@@ -29,35 +49,14 @@ const projects = [
     githubUrl: "https://github.com/Tomiwajin/House-price-prediction",
   },
   {
-    id: 3,
-    title: "Task Manager Desktop App",
-    description:
-      "A JavaFX-based desktop application that allows users to create, manage, and track tasks efficiently. Built using Maven and packaged for deployment.",
-    image: "/projects/project3.png",
-    tags: ["Java", "JavaFX", "Maven", "Node.js", "Render"],
-    demoUrl: "https://task-manager-nr9n.onrender.com",
-    githubUrl: "https://github.com/Tomiwajin/Task-Manager.git",
-  },
-  {
-    id: 4,
+    id: 5,
     title: "Carpool Web App",
     description:
-      "A responsive ride-sharing platform built with HTML, CSS, and JavaScript to connect users going to similar destinations.",
+      "A responsive ride-sharing website developed with HTML, CSS, and JavaScript, connecting users traveling in the same direction.",
     image: "/projects/project4.png",
     tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "https://tomiwajin.github.io/OluwatomiwaJinadu_Project/",
     githubUrl: "https://github.com/Tomiwajin/OluwatomiwaJinadu_Project.git",
-  },
-
-  {
-    id: 5,
-    title: "TomiwaJinadu Portfolio-V1",
-    description:
-      "A responsive ride-sharing platform built with HTML, CSS, and JavaScript to connect users going to similar destinations.",
-    image: "/projects/project5.png",
-    tags: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "",
-    githubUrl: "https://github.com/Tomiwajin/TomiwaJinadu-Portfolio-V1.git",
   },
 ];
 
@@ -76,9 +75,9 @@ export const ProjectsSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project) => (
             <div
-              key={key}
+              key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
@@ -107,13 +106,15 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                     <a
                       href={project.githubUrl}
                       target="_blank"
