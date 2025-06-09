@@ -8,7 +8,7 @@ const projects = [
       "My personal portfolio built with React, Vite, and Tailwind CSS to showcase my development work, skills, and resume. It features smooth animations, responsive design, and modern UI practices.",
     image: "/projects/project5.png",
     tags: ["React", "Vite", "Tailwind CSS"],
-    demoUrl: "#",
+    demoUrl: "https://tomiwa-jinadu-portfolio-v1.vercel.app",
     githubUrl: "https://github.com/Tomiwajin/TomiwaJinadu-Portfolio-V1.git",
   },
   {
