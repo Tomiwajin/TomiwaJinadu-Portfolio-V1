@@ -1,10 +1,11 @@
-import { ThemeToggle } from "../Componentts/ThemeToggle";
-import { StarBackground } from "../Componentts/StarBackGround";
-import { Navbar } from "../Componentts/Navbar";
-import { HeroSection } from "../Componentts/HeroSection";
-import { AboutSection } from "../Componentts/AboutSection";
-import { SkillsSection } from "../Componentts/SkillSection";
-import { ProjectsSection } from "../Componentts/ProjectSection";
+import { ThemeToggle } from "../Components/ThemeToggle";
+import { StarBackground } from "../Components/StarBackGround";
+import { Navbar } from "../Components/Navbar";
+import { HeroSection } from "../Components/HeroSection";
+import { AboutSection } from "../Components/AboutSection";
+import { SkillsSection } from "../Components/SkillSection";
+import { ProjectsSection } from "../Components/ProjectSection";
+import { ContactSection } from "../Components/ContactSection";
 
 export const Home = () => {
   return (
@@ -23,6 +24,7 @@ export const Home = () => {
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
+        <ContactSection />
       </main>
 
       {/* footer  */}
