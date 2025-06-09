@@ -32,12 +32,18 @@ export const HeroSection = () => {
               Jinadu{" "}
             </span>
           </h1>
+          <h2
+            className="text-primary
+          text xl md:text-4xl font-bold tracking-tight "
+          >
+            {" "}
+            I build software that solves real problems.{" "}
+          </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I'm passionate software developer with a strong foundation in
-            front-end development, mobile apps, and full-stack solutions. I
-            enjoy building clean, user-friendly interfaces and solving
-            real-world problems through code. Currently exploring AI
-            integrations and cloud technologies to take my skills even further.
+            I’m a developer focused on front-end, mobile, and full-stack
+            solutions, crafting clean, user-friendly experiences. Currently, I’m
+            exploring AI and cloud technologies to push what I can create even
+            further.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
